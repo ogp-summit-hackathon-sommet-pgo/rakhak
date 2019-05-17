@@ -7,6 +7,7 @@ app.engine('handlebars', handlebars.engine);
 var path = require('path');
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
+
 // Home page routing
 app.get('/', function(req, res){
     res.render('home');
