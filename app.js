@@ -7,6 +7,10 @@ const handlebars = require('express-handlebars').create({
 });
 const path = require('path');
 
+// load routes
+const greenhouse = require('./routes/greenhouse');
+const users = require('./routes/users');
+
 // require models
 require('./models/Greenhouse');
 
@@ -34,6 +38,7 @@ mongoose.connection
 
 const app = express();
 app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 app.set('view engine', 'handlebars');
@@ -41,25 +46,12 @@ app.set('port', process.env.PORT || 3000);
 
 // Home page routing
 app.get('/', (req, res) => {
-  res.render('login');
-});
-
-// Login routing
-app.get('/home', (req, res) => {
   res.render('home');
-  const newUser = {
-    email: req.body.email,
-    password: req.body.password,
-  };
-  new Green(newUser).save().then(() => {
-    res.redirect('/');
-  });
 });
 
-// Register routing
-app.get('/register', (req, res) => {
-  res.render('register');
-});
+// use routes
+// app.use('/greenhouse', greenhouse);
+app.use('/users', users);
 
 app.listen(app.get('port'), () => {
   console.log('-------------------------------------------');
