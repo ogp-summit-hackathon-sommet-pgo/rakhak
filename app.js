@@ -11,12 +11,12 @@ app.set('port', process.env.PORT || 3000);
 
 // Home page routing
 app.get('/', function(req, res){
-    res.render('home');
+    res.render('login');
 });
 
 // Login routing
-app.get('/login', function(req, res){
-    res.render('login')
+app.get('/home', function(req, res){
+    res.render('home')
 });
 
 // Register routing
