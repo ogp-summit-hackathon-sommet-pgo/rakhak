@@ -2,6 +2,7 @@
 // Defining global consts for the webserver
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars').create({
   defaultLayout: 'main',
 });
@@ -34,7 +35,8 @@ mongoose.connection
 
 const app = express();
 app.engine('handlebars', handlebars.engine);
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.set('view engine', 'handlebars');
 app.set('port', process.env.PORT || 3000);
@@ -43,6 +45,16 @@ app.set('port', process.env.PORT || 3000);
 app.get('/', (req, res) => {
   res.render('login');
 });
+
+app.post('/login', (req, res) => {
+    res.redirect(303, '/home');
+});
+
+app.get('/error', (req, res) => {
+    res.render('loginfail');
+});
+
+
 
 // Login routing
 app.get('/home', (req, res) => {
@@ -59,6 +71,10 @@ app.get('/home', (req, res) => {
 // Register routing
 app.get('/register', (req, res) => {
   res.render('register');
+});
+
+app.post('/reg-proc', (req, res) => {
+    console.log("Worked")
 });
 
 app.listen(app.get('port'), () => {
