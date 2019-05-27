@@ -10,14 +10,18 @@ Grafitti - > Combine with crime data
 
 
 List of big oops moments in vancouver:
-	- Kootenay Park fire
-	- Tohoku Earthquare and Tsunami
-	- 2015 Wildfires
+	- Kootenay Park fire (August 01 2018-> September 14 2018)
+	https://www.pc.gc.ca/en/pn-np/bc/kootenay/securite-safety/kpn-knp-feu-fire-2018
+	- Tohoku Earthquake and Tsunami (March 11 2011 at 22:46 PDT) Lasted 6 minutes
+	https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami
+	- 2015 Wildfires 
 	- 2017 BC Wildfires
 	- 2018 BC Wildfires
-	- 2003 Connaught Creek Valley Avalanche
-	- 2008 snow storms
-	- 2008 Flathead Valley Avalanches
-	- Great Costal Gale 2007
-	- Haunkkah Eve Windstorm 2006
+	For all wildfires (https://www2.gov.bc.ca/gov/content/safety/wildfire-status/about-bcws/wildfire-			history/wildfire-season-summary)
+	- 2003 Connaught Creek Valley Avalanche (February 1 2003)
+	https://en.wikipedia.org/wiki/2003_Connaught_Creek_Valley_avalanche
+	- 2008 snow storms 
+	- 2008 Flathead Valley Avalanches (December 28, 2008)
+	- Great Costal Gale 2007 (November 29, 2007 -> December 4, 2007)
+	- Haunkkah Eve Windstorm 2006 (December 13, 2006 -> December 15, 2006)
 
