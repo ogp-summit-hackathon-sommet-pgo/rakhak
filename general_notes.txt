@@ -1,0 +1,23 @@
+==== VANCOUVER PUBLIC DATA ====
+
+311 Case volume -> Strain on services/bottlenecking
+311 Case locations -> Bottle necking/strain
+General business data -> Look for impacts on the GDP
+	- Food markets and farmer markets
+	- Gardens and food trees
+Crime data -> Strain on police services
+Grafitti - > Combine with crime data
+
+
+List of big oops moments in vancouver:
+	- Kootenay Park fire
+	- Tohoku Earthquare and Tsunami
+	- 2015 Wildfires
+	- 2017 BC Wildfires
+	- 2018 BC Wildfires
+	- 2003 Connaught Creek Valley Avalanche
+	- 2008 snow storms
+	- 2008 Flathead Valley Avalanches
+	- Great Costal Gale 2007
+	- Haunkkah Eve Windstorm 2006
+
