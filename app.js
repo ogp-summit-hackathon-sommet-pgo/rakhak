@@ -16,17 +16,14 @@ const app = express();
 
 // load routes
 const displayForms = require('./routes/displayForms');
-const greenhouse = require('./routes/greenhouse');
 const users = require('./routes/users');
 
 // require models
-require('./models/Greenhouse');
 require('./models/Users');
 require('./models/DisplayForms');
 
 // model instance
 const Display = mongoose.model('displayForms');
-const Green = mongoose.model('green');
 const User = mongoose.model('users');
 
 // Map global promise - get rid of warning
@@ -88,7 +85,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Global variables
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');

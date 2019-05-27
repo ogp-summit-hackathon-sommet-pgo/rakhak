@@ -11,21 +11,21 @@ const DisplayForms = mongoose.model('displayForms');
 
 // DisplayForms index page
 router.get('/', ensureAuthenticated, (req, res) => {
-  DisplayForms.find({ user: req.user.id })
+/*   DisplayForms.find({ user: req.user.id })
     .sort({ date: 'desc' })
-    .then(displayForms => {
-      res.render('displayForms/index', {
-        displayForms,
-      });
-    });
+    .then(displayForms => { */
+  res.render('displayForms/index', {
+    // displayForms,
+  });
+    //}); 
 });
 
-// Add displayForms form
-router.get('/add', ensureAuthenticated, (req, res) => {
-  res.render('displayForms/add');
+// post form
+router.get('/post', ensureAuthenticated, (req, res) => {
+  res.render('displayForms/post');
 });
 
-// edit displayForms form
+// edit form
 router.get('/edit/:id', ensureAuthenticated, (req, res) => {
   DisplayForms.findOne({
     _id: req.params.id,
@@ -35,7 +35,7 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
       res.redirect('/displayForms');
     } else {
       res.render('displayForms/edit', {
-        displayForm,
+        //displayForm,
       });
     }
   });
@@ -43,7 +43,7 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 
 // process form
 router.post('/', ensureAuthenticated, (req, res) => {
-  const errors = [];
+  /* const errors = [];
   if (!req.body.title) {
     errors.push({ text: 'please add a title' });
   }
@@ -67,12 +67,12 @@ router.post('/', ensureAuthenticated, (req, res) => {
       req.flash('success_msg', 'displayForms added');
       res.redirect('/displayForms');
     });
-  }
+  } */
 });
 
 // edit form process
 router.put('/edit/:id', ensureAuthenticated, (req, res) => {
-  DisplayForms.findOne({
+  /* DisplayForms.findOne({
     _id: req.params.id,
   }).then(displayForms => {
     displayForms.title = req.body.title;
@@ -82,15 +82,15 @@ router.put('/edit/:id', ensureAuthenticated, (req, res) => {
       req.flash('success_msg', 'displayForms updated');
       res.redirect('/displayForms');
     });
-  });
+  }); */
 });
 
-// Delete displayForms
+// Delete Form
 router.delete('/:id', ensureAuthenticated, (req, res) => {
-  DisplayForms.deleteOne({ _id: req.params.id }).then(() => {
+  /* DisplayForms.deleteOne({ _id: req.params.id }).then(() => {
     req.flash('success_msg', 'displayForms removed');
     res.redirect('/displayForms');
-  });
+  }); */
 });
 
 module.exports = router;

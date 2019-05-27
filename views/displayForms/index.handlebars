@@ -1,20 +1,20 @@
 {{#if user}}
-<div class="jumbotron text-center">
-  <h1 class="display-3">{{title}}</h1>
-  <p class="lead">add Display Forms</p>
-  <a href="/displayForms/add" class="btn btn-dark btn-lg">add idea</a>
+<br>
+<div class="jumbotron" style="background-color: #1b4b17; padding: 3%;">
+  <div class="jumbotron" style="padding: 4%;">
+
+  </div>
 </div>
+
+
+{{!-- POST REQUEST
 {{#each displayForms}}
 <div class="card card-body mb-2">
-  <h4>{{title}}</h4>
-  <p>{{details}}</p>
-  <a class="btn btn-dark btn-block" href="/displayForms/edit/{{id}}">Edit</a>
   <form method="post" action="/displayForms/{{id}}?_method=DELETE">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" class="btn btn-danger btn-block" value="Delete">
   </form>
 </div>
-{{/each}}
+{{/each}} --}}
 
 {{else}}
 <p>Login required</p>
