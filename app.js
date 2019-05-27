@@ -18,6 +18,9 @@ const app = express();
 const displayForms = require('./routes/displayForms');
 const users = require('./routes/users');
 
+require('dotenv').config();
+const APIKEY = process.env.APIKEY;
+
 // require models
 require('./models/Users');
 require('./models/DisplayForms');
@@ -40,6 +43,7 @@ mongoose
 mongoose.connection
   .once('open', () => {
     console.log('connected to greenhouse-dev');
+    console.log(APIKEY);
   })
   .on('error', error => {
     console.log('connection error');
