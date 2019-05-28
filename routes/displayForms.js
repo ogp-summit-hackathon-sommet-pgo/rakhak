@@ -44,7 +44,16 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 
 // process form
 router.post('/', (req, res) => {
-  capture.fromURL("http://localhost:5006/displayForms", "./public/images/capture.png", function(){
+  
+  capture.fromURL("http://localhost:5006/displayForms", "./public/images/capture.png", {
+    waitMilliseconds: 500,
+    clip: {
+      x: 235,
+      y: 235,
+      width: 800,
+      height: 500
+    }
+  }, function(){
 
   });
   res.redirect('/displayForms');
