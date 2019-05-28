@@ -1,34 +1,38 @@
 {{#if user}}
 <br>
+<style>
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+</style>
 <div class="jumbotron">
-  <div class=" jumbotron" style="padding: 4%;">
-
-    <div id="map" style="width: 400px; height: 400px;"></div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key={{APIKEY}}&callback=initMap">
-    </script>
-    <script>
-      function initMap() {
-        // The location of Uluru
-        var uluru = {
-          lat: -25.344,
-          lng: 131.036
-        };
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-          document.getElementById('map'), {
-            zoom: 4,
-            center: uluru
-          });
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+  <div id="map" class="center" style="width: 600px; height: 400px;"></div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key={{APIKEY}}&callback=initMap">
+  </script>
+  <script>
+    function initMap() {
+      // The location of Uluru
+      var uluru = {
+        lat: -25.344,
+        lng: 131.036
+      };
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+        document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
         });
-      }
-    </script>
-  </div>
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
 </div>
-
 
 {{!-- POST REQUEST
 {{#each displayForms}}
