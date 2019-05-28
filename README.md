@@ -15,6 +15,7 @@ OpenResponse is a web app tool which can create predictive disaster scenarios an
 
 ### Prerequisites
 Frameworks and Libraries: Python (Pillow, Pandas), JavaScript (Node, Express, DotEnv)
+
 IDE: Visual Studio Code 
 
 ## Deployment
