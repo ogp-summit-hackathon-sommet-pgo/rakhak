@@ -1,8 +1,11 @@
 /* eslint-disable eqeqeq */
 const express = require('express');
 const mongoose = require('mongoose');
-
 const router = express.Router();
+const capture = require("node-server-screenshot");
+
+
+
 const { ensureAuthenticated } = require('../helpers/auth');
 
 require('../models/DisplayForms');
@@ -10,14 +13,12 @@ require('../models/DisplayForms');
 const DisplayForms = mongoose.model('displayForms');
 
 // DisplayForms index page
-router.get('/', ensureAuthenticated, (req, res) => {
+router.get('/', (req, res) => {
 /*   DisplayForms.find({ user: req.user.id })
     .sort({ date: 'desc' })
     .then(displayForms => { */
   res.render('displayForms/index', {
-    // displayForms,
   });
-    //}); 
 });
 
 // post form
@@ -42,7 +43,12 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 });
 
 // process form
-router.post('/', ensureAuthenticated, (req, res) => {
+router.post('/', (req, res) => {
+  capture.fromURL("http://localhost:5006/displayForms", "./public/images/capture.png", function(){
+
+  });
+  res.redirect('/displayForms');
+
   /* const errors = [];
   if (!req.body.title) {
     errors.push({ text: 'please add a title' });

@@ -107,6 +107,6 @@ app.use('/users', users);
 
 app.listen(app.get('port'), () => {
   console.log('-------------------------------------------');
-  console.log('==> Node Webserver Started on Port 3000 <==');
+  console.log('==> Node Webserver Started on Port ' + process.env.PORT + ' <==');
   console.log('-------------------------------------------');
 });

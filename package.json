@@ -19,12 +19,17 @@
     "express": "^4.16.4",
     "express-handlebars": "3.1.0",
     "express-session": "^1.16.1",
+    "fs": "0.0.1-security",
+    "html2canvas": "^1.0.0-rc.1",
+    "jsdom": "^15.1.1",
     "method-override": "^3.0.0",
     "mongodb": "3.2.4",
     "mongoose": "^5.5.9",
+    "node-server-screenshot": "^0.2.1",
     "nodemon": "^1.19.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
