@@ -4,6 +4,7 @@
   "description": "Greenhouse App",
   "main": "app.js",
   "scripts": {
+    "start": "set NODE_ENV=dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },

@@ -11,15 +11,11 @@ const session = require('express-session');
 const handlebars = require('express-handlebars').create({
   defaultLayout: 'main',
 });
-
 const app = express();
 
 // load routes
 const displayForms = require('./routes/displayForms');
 const users = require('./routes/users');
-
-require('dotenv').config();
-const APIKEY = process.env.APIKEY;
 
 // require models
 require('./models/Users');
@@ -43,7 +39,7 @@ mongoose
 mongoose.connection
   .once('open', () => {
     console.log('connected to greenhouse-dev');
-    console.log(APIKEY);
+    console.log(process.env.APIKEY);
   })
   .on('error', error => {
     console.log('connection error');
