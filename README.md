@@ -10,7 +10,7 @@ OpenResponse is a web app tool which can create predictive disaster scenarios an
 SDG indicator 11.7.1: Mobilize open data to identify the share of public use of open spaces in cities. What percentage is green space? How often are they used? How much open space is accessible to children? Older persons? Persons with disabilities?
 
 ## Prerequisites
-Frameworks and Libraries: Python (Pillow, Pandas), JavaScript (Node, Express, DotEnv, Mongoose)
+Frameworks and Libraries: Python (Pillow, Pandas, PyShell), JavaScript (Node, Express, DotEnv, Mongoose)
 
 IDE: Visual Studio Code 
 
