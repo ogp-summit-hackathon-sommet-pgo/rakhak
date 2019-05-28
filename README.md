@@ -24,7 +24,7 @@ IDE: Visual Studio Code
 ## Built With
 
 * [Node](https://nodejs.org/en/) - The web framework used
-* [Express] (https://expressjs.com/) - The web application framework used
+* [Express](https://expressjs.com/) - The web application framework used
 * [Python Pillow](https://pillow.readthedocs.io/en/stable/) - Imaging library used to analyze Google Maps snapshots
 
 ## Authors
