@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
 const capture = require("node-server-screenshot");
+const screencapture = require('nodejs-screen-capture');
 
 
 
@@ -13,7 +14,7 @@ require('../models/DisplayForms');
 const DisplayForms = mongoose.model('displayForms');
 
 // DisplayForms index page
-router.get('/', (req, res) => {
+router.get('/', ensureAuthenticated, (req, res) => {
 /*   DisplayForms.find({ user: req.user.id })
     .sort({ date: 'desc' })
     .then(displayForms => { */
@@ -45,7 +46,7 @@ router.get('/edit/:id', ensureAuthenticated, (req, res) => {
 // process form
 router.post('/', (req, res) => {
   
-  capture.fromURL("http://localhost:5006/displayForms", "./public/images/capture.png", {
+/*   capture.fromURL("http://localhost:5006/displayForms/capture", "./public/images/capture.png", {
     waitMilliseconds: 500,
     clip: {
       x: 235,
@@ -55,7 +56,8 @@ router.post('/', (req, res) => {
     }
   }, function(){
 
-  });
+  }); */
+  screencapture.captureAndSave(600, 400, 'png', "./public/images/screenCapture.png");
   res.redirect('/displayForms');
 
   /* const errors = [];
