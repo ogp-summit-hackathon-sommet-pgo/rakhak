@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
+const APIKEY = process.env.APIKEY;
 const handlebars = require('express-handlebars').create({
   defaultLayout: 'main',
 });
@@ -39,7 +40,6 @@ mongoose
 mongoose.connection
   .once('open', () => {
     console.log('connected to greenhouse-dev');
-    console.log(process.env.APIKEY);
   })
   .on('error', error => {
     console.log('connection error');
@@ -91,6 +91,7 @@ app.use(function (req, res, next) {
   res.locals.error = req.flash('error');
   res.locals.err = req.flash('err');
   res.locals.user = req.user || null;
+  res.locals.APIKEY = APIKEY;
   next();
 });
 
