@@ -14,13 +14,9 @@ SDG indicator 11.7.1: Mobilize open data to identify the share of public use of 
 OpenResponse is a web app tool which can create predictive disaster scenarios and simulate the effect these events have over the local GDP, damage to critical infrastructure, and disruptions to services based on patterns found in previous catastrophes. Our tool can significantly help government officials and strategists prepare for future tragedies, thus saving time, money, and, most importantly, lives.
 
 ### Prerequisites
-Frameworks and Libraries: Python (Pillow, Pandas), JavaScript (Node, Express, DotEnv)
+Frameworks and Libraries: Python (Pillow, Pandas), JavaScript (Node, Express, DotEnv, Mongoose)
 
 IDE: Visual Studio Code 
-
-## Deployment
-
-*********FILLL IIN********
 
 ## Built With
 
