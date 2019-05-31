@@ -8,10 +8,13 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const flash = require('connect-flash');
 const session = require('express-session');
-const APIKEY = process.env.APIKEY;
 const handlebars = require('express-handlebars').create({
   defaultLayout: 'main',
 });
+
+// eslint-disable-next-line prefer-destructuring
+const APIKEY = process.env.APIKEY;
+
 const app = express();
 
 // load routes
@@ -85,7 +88,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Global variables
-app.use(function (req, res, next) {
+app.use(function(req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
@@ -107,6 +110,6 @@ app.use('/users', users);
 
 app.listen(app.get('port'), () => {
   console.log('-------------------------------------------');
-  console.log('==> Node Webserver Started on Port ' + process.env.PORT + ' <==');
+  console.log(`==> Node Webserver Started on Port ${process.env.PORT} <==`);
   console.log('-------------------------------------------');
 });
