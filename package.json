@@ -20,7 +20,6 @@
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.1",
     "fs": "0.0.1-security",
-    "handlebars": "^4.7.2",
     "html2canvas": "^1.0.0-rc.1",
     "jsdom": "^15.1.1",
     "method-override": "^3.0.0",
