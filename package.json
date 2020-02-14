@@ -32,7 +32,7 @@
     "passport-local": "^1.0.0",
     "peerdeps": "^1.0.0",
     "set-value": "^3.0.1",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
